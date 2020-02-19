@@ -15,7 +15,7 @@ before_install:
 install:
 - npm install
 script:
-- ls
+- export PROJECT_DIR=pwd
 - docker pull vitr/casperjs
-- docker run -d --name casperjs-daemon -v /casper-pipeline-test:/home/casperjs-tests --restart always vitr/casperjs
+- docker run -d --name casperjs-daemon -v $PROJECT_DIR:/home/casperjs-tests --restart always vitr/casperjs
 - docker exec casperjs-daemon casperjs /home/casperjs-tests/index.js
