@@ -18,4 +18,4 @@ script:
 - export PROJECT_DIR=pwd
 - docker pull vitr/casperjs
 - docker run -d --name casperjs-daemon -v $PROJECT_DIR:/home/casperjs-tests --restart always vitr/casperjs
-- docker exec casperjs-daemon casperjs /home/casperjs-tests/index.js
+- docker exec casperjs-daemon casperjs index.js
