@@ -1,0 +1,1 @@
+window.open("/login/","AppLogin","resizable,scrollbars,status,width=600,height=400");
