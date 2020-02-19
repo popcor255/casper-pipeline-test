@@ -8,7 +8,7 @@ casper.options.viewportSize = { width: 900, height: 900 };
 var url = 'https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&flowEntry=ServiceLogin';
 //This is dummy data
 var gmail = 'savemestupid@gmail.com';
-var psw = 'SaveMeStupid1!';
+var psw = 'SaveMeStupid1!1';
 
 casper.start(url, function() {
 	this.echo('trying to login into google...');
