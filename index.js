@@ -8,7 +8,7 @@ casper.options.viewportSize = { width: 900, height: 900 };
 var url = 'https://accounts.google.com/signin/v2/identifier?hl=en&passive=true&flowEntry=ServiceLogin';
 //This is dummy data
 var gmail = 'savemestupid@gmail.com';
-var psw = 'SaveMeStupid1!1';
+var psw = 'SaveMeStupid1!';
 
 casper.start(url, function() {
 	this.echo('trying to login into google...');
@@ -24,17 +24,6 @@ casper.start(url, function() {
 	casper.wait(1000, function() {
 		this.echo('waiting 1 second...');
 		casper.capture('screenshots/google-login-state.png');
-	});
-});
-
-casper.thenOpen('https://foobar.withgoogle.com/', function() {
-	casper.click('a#login');
-	casper.capture('screenshots/google-login-poop.png');
-
-	casper.withPopup(0, function() {
-		this.echo('url popup created : ' + this.getCurrentUrl(), 'INFO');
-
-		this.capture('screenshots/screen.png');
 	});
 });
 
@@ -56,5 +45,3 @@ function enterPassword() {
 	casper.click('div#passwordNext');
 	casper.capture('screenshots/google-login-pass.png');
 }
-
-//casper.echo(casper.exists('div#password'));
